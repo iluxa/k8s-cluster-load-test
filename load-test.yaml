@@ -51,7 +51,7 @@ metadata:
   name: k6-load-test
   namespace: ks-load
 spec:
-  replicas: 3  # Number of replicas
+  replicas: 3 # Number of replicas
   selector:
     matchLabels:
       app: k6-load-test
@@ -62,7 +62,7 @@ spec:
     spec:
       containers:
       - name: k6
-        image: alongir/k6-loadtest:latest
+        image: gilyav/k6-loadtest:latest
         env:
           - name: VUS
             value: "100"

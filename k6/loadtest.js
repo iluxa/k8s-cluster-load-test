@@ -5,6 +5,7 @@ import { sleep, check } from 'k6';
 export let options = {
 //   vus: __ENV.VUS || 10,
 //   duration: __ENV.DURATION || '30s',
+  insecureSkipTLSVerify: true,
   stages: [
     { duration: '20s', target: __ENV.VUS || 10 }, // Ramp up to 100 users over 2 minutes
     { duration: __ENV.DURATION || '30s', target: __ENV.VUS || 10 }, // Ramp up to 100 users over 2 minutes
